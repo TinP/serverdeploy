@@ -24,13 +24,14 @@ app.post('/webhook/', function (req, res) {
     if (event.message && event.message.text) {
      var text = event.message.text;
       // Handle a text message from this sender
+      console.log(text)
       sendTextMessage(sender, 'TUKKY : ' + text)
     }
   }
   res.sendStatus(200);
 });
 
-var token = "ah5s4PEjMzwa2QZB1Kd306ybAnf7mxhJsd4fqdiHP3vDHa1sX2pz9bPRIVjSEAZD";
+var token = "CAAPeosf3vJcBAHz1ZBGmix92Ot9lwDiZAGEyqqZCjC4w0iLpk1X5iZA4Hw8KwFnEluVYiYbYF8I8nI0ZAKeGVBV32uFriTYHL0ENxHw4p8HX1Yic5Dr8ddEz02AeVwBYq5q2Mj8W2HQxfNpJUiSZARW9eXh3hN6zsAl1TWLplxgTLcZB24hBK1BkXIxRfT34lsZD";
 
 function sendTextMessage(sender, text) {
   var messageData = {
